@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$titulo_archivo</title>
+    <style>
+        body {
+            background: rgb(204,204,204); 
+        }
+
+        page {
+            background: white;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            box-shadow: 0 0 0.5cm rgba(0,0,0,0);
+        }
+
+        page[size="A4"] {  
+            width: 21cm;
+            height: 29.7cm; 
+        }
+
+        page[size="A4"][layout="portrait"] {
+            width: 29.7cm;
+            height: 21cm;  
+        }
+
+        @media print {
+            body, page {
+                margin: 0;
+                box-shadow: 0;
+                padding-top: 5px;
+                padding-bottom: 72px ;
+            }
+
+            @page {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <page>
+        <table width="100%" cellspacing="1" cellpadding="4" border="">
+            <tbody>
+                <tr>
+                    <td width="45%" valign="TOP" height="36">
+                        <font size="2"></font>
+                        <p>
+                            <font size="2"></font><font size="2" face="Courier (W1)">$nombre_fantasia_logo</font>
+                        </p>
+                        <font size="2" face="Courier (W1)"></font>
+                        <p>
+                            <font size="2" face="Courier (W1)">$apellido_nombre_razon_social</font>
+                        </p>
+                    </td>
+                    <td colspan="2" width="10%" valign="TOP" height="36">
+                        <font size="2" face="Courier (W1)"></font>
+                        <p align="CENTER">
+                            <font size="15" face="Courier (W1)">$letra_comprobante</font>
+                        </p>
+                        <p align="CENTER">
+                            <font size="1" face="Courier (W1)">Cod. $numero_cod</font>
+                        </p>
+                    </td>
+                    <td width="45%" valign="TOP" height="36">
+                        <font size="5" face="Courier (W1)">
+                            <p align="CENTER">$tipo_comprobante</p>
+                        </font>
+                        <font size="4" face="Courier (W1)">
+                            <p align="CENTER">Nº $punto_venta - $numero_comprobante</p>
+                        </font>
+                        <p align="RIGHT">
+                            <font size="2" face="Courier (W1)">$fecha_hora</font>
+                        </p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" width="50%" valign="TOP">
+                        <font size="2" face="Courier (W1)"><p>$domicilio_comercial</p>
+                        <p>$domicilio_fiscal</p>
+                        </font><p><font size="2" face="Courier (W1)">$condicion_frente_iva</font></p>
+                    </td>
+                    <td colspan="2" width="50%" valign="TOP">
+                        <font size="2" face="Courier (W1)"><p align="RIGHT">$cuit</p>
+                        <p align="RIGHT">$ingresos_brutos</p>
+                        </font><p align="RIGHT"><font size="2" face="Courier (W1)">$inicio_actividades</font></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" valign="TOP" height="60">
+                    <font size="2" face="Courier (W1)"><p>$identificacion_apellido_nombre_razon_social</p>
+                    <p>$identificacion_domicilio_comercial $identificacion_cuit</p>
+                    </font><p><font size="2" face="Courier (W1)">$identificacion_condicion_frente_iva $identificacion_remitos_numeros</font></p></td>
+                </tr>
+                <tr>
+                    <td colspan="4" valign="TOP">
+                    <font size="2" face="Courier (W1)"><p>$producto_cantidad $producto_descripcion $producto_precio $producto_alicuota $producto_porcentaje_base $producto_precio_unitario $producto_iva $producto_iva_neto </p>
+                    <p>$subtotal $alicuota $iva $perpceciones_iva $percepciones_otros $conceptos </p>
+                    </font><p><font size="2" face="Courier (W1)">$total</font></p></td>
+                </tr>
+                <tr>
+                    <td colspan="4" valign="TOP">
+                    <font size="2" face="Courier (W1)"></font><p><font size="2" face="Courier (W1)">RECIBI(MOS) $recibimos</font></p></td>
+                </tr>
+                <tr>
+                    <td colspan="4" valign="TOP">
+                        <font size="2" face="Courier (W1)"><p>CAE $cae</p>
+                        <p>Fecha de vencicimiento de CAE: $fecha_vencimiento_cae</p>
+                        <p>$codigo_barras</p>
+                        <p>$qr</p>
+                        </font><p><font size="2" face="Courier (W1)">36</font></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </page>
+</body>
+</html>
